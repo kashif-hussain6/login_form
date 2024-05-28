@@ -1,0 +1,195 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== COLOR VARIABLES ===== */
+
+:root{
+    --primary-color: rgb(233 30 99);
+    --second-color: #ffffff; 
+    --black-color: #ffffff;
+}
+
+/* ===== BODY - BACKGROUND IMAGE ===== */
+
+body{
+    
+    background: #9a90f5;
+}
+
+
+/* ===== Reusable CSS ===== */
+
+a{
+    text-decoration: none;
+    color: var(--second-color);
+}
+a:hover{
+    text-decoration: underline;
+
+}
+
+
+/* ===== WRAPPER ===== */
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 780px;
+    background-color: rgb(255, 255, 255);
+}
+
+.login-box{
+    position: relative;
+    width: 450px;
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 120px 40px 64px 40px;
+    background-color: #c0bfbf40;
+    box-shadow: 0px 0px 10px 2px rgba(255, 0, 0, 0.3);
+}
+
+.login-header{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--primary-color);
+    width: 140px;
+    height: 70px;
+    border-radius: 0 0 20px 20px ;
+}
+
+.login-header span {
+    font-size: 30px;
+    color: var(--black-color);
+}
+
+.login-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px; 
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 var(--primary-color);
+}
+
+.login-header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px; 
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 0 0 0 var(--primary-color);
+}
+
+.input_box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.input-field{
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    background: transparent;
+    color: #000000;
+    padding-inline: 20px 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    outline: none;
+}
+
+#user{
+    margin-bottom: 10px;
+}
+
+.label{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: .2s ease-in-out;
+}
+
+.input-field:focus ~ .label,
+.input-field:valid ~ .label{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 14px;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+
+}
+
+.icon{
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+}
+
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.input-submit{
+    color: white;
+    width: 100%;
+    height: 50px;
+    background: rgb(233 30 99);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.input-submit:hover{
+    background: #c1114d;
+}
+
+.register{
+    text-align: center;
+}
+
+.register a{
+    font-weight: 500;
+}
+
+a{
+    color: rgb(233 30 99);
+}
+
+@media only screen and (max-width: 564px) {
+    .wrapper{
+        padding: 20px;
+    }
+    .login-box{
+        padding: 7.5em 1.5em 4em 2.5em;
+    }
+}
